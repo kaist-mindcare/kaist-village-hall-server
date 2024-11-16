@@ -1,3 +1,5 @@
+val exposedVersion: String by project
+
 plugins {
     kotlin("jvm") version "2.0.10"
     kotlin("plugin.spring") version "2.0.10"
@@ -23,6 +25,7 @@ dependencies {
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
 
+    implementation("org.jetbrains.exposed:exposed-spring-boot-starter:$exposedVersion")
     runtimeOnly("com.mysql:mysql-connector-j")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
